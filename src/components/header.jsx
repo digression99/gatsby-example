@@ -26,6 +26,9 @@ export default ({ headerText }) => (
       <Link to="/contact" style={linkStyle}>
         contact
       </Link>
+      <Link to="/fake-1" style={linkStyle}>
+        fake 1
+      </Link>
     </div>
   </div>
 )
