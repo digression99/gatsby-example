@@ -8,8 +8,22 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Pandas Eating Lots",
+    description: "A simple description about pandas eating...",
+    author: "Pseudocoder Kim",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        display: "standalone",
+        icon: "src/images/icon.png",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -25,5 +39,7 @@ module.exports = {
         pathToConfigModule: "src/utils/typography",
       },
     },
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
   ],
 }
